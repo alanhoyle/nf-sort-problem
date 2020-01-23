@@ -1,5 +1,6 @@
 combineSortTrue = Channel.fromPath ('file?')
 combineSortDeep = Channel.fromPath ('file?')
+combineSortHash = Channel.fromPath ('file?')
 combineSortNatural = Channel.fromPath ('file?')
 
 
@@ -20,6 +21,16 @@ combineSortDeep
         name: 'actual_deep.txt', 
         keepHeader: true,
         sort: 'deep',
+
+        skip: 1,
+        storeDir: "."
+        )
+
+combineSortHash
+    .collectFile(
+        name: 'actual_hash.txt', 
+        keepHeader: true,
+        sort: 'hash',
 
         skip: 1,
         storeDir: "."
