@@ -1,7 +1,10 @@
-combineSortTrue = Channel.fromPath ('file?')
-combineSortDeep = Channel.fromPath ('file?')
-combineSortHash = Channel.fromPath ('file?')
-combineSortNatural = Channel.fromPath ('file?')
+Channel.fromPath ('file?')
+    .into
+    { combineSortTrue ;
+    combineSortDeep ;
+    combineSortHash ;
+    combineSortNatural ;
+    }
 
 
 combineSortTrue
